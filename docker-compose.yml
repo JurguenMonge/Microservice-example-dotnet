@@ -6,7 +6,7 @@ services:
       - "8001:8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Server=192.168.100.223,1433;Database=ProductDb;User=sa;Password=123456;Encrypt=False;
+      - ConnectionStrings__DefaultConnection=Server=192.168.x.x,1433;Database=ProductDb;User=xxx;Password=xxx;Encrypt=False;
         
   order-service:
     build: 
@@ -15,5 +15,5 @@ services:
       - "8002:8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Server=192.168.100.223,1433;Database=OrderDb;User=sa;Password=123456;Encrypt=False;
+      - ConnectionStrings__DefaultConnection=Server=192.168.100.x,1433;Database=OrderDb;User=xxx;Password=xxx;Encrypt=False;
        
