@@ -1,0 +1,19 @@
+services:
+  product-service:
+    build: 
+      context: ./ProductService
+    ports:
+      - "8001:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=192.168.100.223,1433;Database=ProductDb;User=sa;Password=123456;Encrypt=False;
+        
+  order-service:
+    build: 
+      context: ./OrderService
+    ports:
+      - "8002:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=192.168.100.223,1433;Database=OrderDb;User=sa;Password=123456;Encrypt=False;
+       
